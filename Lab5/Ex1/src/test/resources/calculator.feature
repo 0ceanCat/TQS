@@ -11,10 +11,6 @@ Feature: Basic Arithmetic
     When I substract 7 to 2
     Then the result is 5
 
-  Scenario: Multiplication
-    When I multiply 0 to 2
-    Then the result is 0
-
   Scenario Outline: Several additions
     When I add <a> and <b>
     Then the result is <c>

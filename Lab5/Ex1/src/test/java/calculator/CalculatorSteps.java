@@ -1,6 +1,5 @@
 package calculator;
 
-import calculator.Calculator;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -36,12 +35,5 @@ public class CalculatorSteps {
     @Then("the result is {int}")
     public void the_result_is(double expected) {
         assertEquals(expected, calc.value());
-    }
-
-    @When("I multiply {int} to {int}")
-    public void iMultiplyTo(int arg0, int arg1) {
-        calc.push(arg0);
-        calc.push(arg1);
-        calc.push("*");
     }
 }

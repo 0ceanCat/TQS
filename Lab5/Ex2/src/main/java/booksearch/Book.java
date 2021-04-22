@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Book {
     private String title;
+    private String category;
     private String author;
     private LocalDateTime published;
 }
