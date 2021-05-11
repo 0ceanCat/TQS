@@ -19,7 +19,7 @@ public class AddressResolverIT {
     private AddressResolver resolver;
 
     @BeforeEach
-    void init(){
+    void init() {
         httpClient = new TqsHttpBasic();
 
         resolver = new AddressResolver();
@@ -32,15 +32,15 @@ public class AddressResolverIT {
         Address result = resolver.findAddressForLocation(40.640661, -8.656688);
 
         //return
-        assertEquals( result, new Address( "Cais do Alboi", "Glória e Vera Cruz", "Centro", "3800-246", null) );
+        assertEquals(result, new Address("Cais do Alboi", "Glória e Vera Cruz", "Centro", "3800-246", null));
 
     }
 
     @Test
-    public void whenBadCoordinates_throwBadArrayIndex() throws IOException{
+    public void whenBadCoordinates_throwBadArrayIndex() throws IOException {
         // bad coordinates
         assertThrows(BadArrayIndex.class,
-                () ->resolver.findAddressForLocation(180, 190));
+                () -> resolver.findAddressForLocation(180, 190));
     }
 
 }

@@ -11,7 +11,7 @@ import java.io.IOException;
  * @author wy
  * @date 2021/3/26 9:48
  */
-public class TqsHttpBasic implements TqsHttpClient{
+public class TqsHttpBasic implements TqsHttpClient {
     @Override
     public String get(String url) throws IOException {
         CloseableHttpClient client = HttpClients.createDefault();

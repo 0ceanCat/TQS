@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,12 +13,12 @@ class SampleTest {
 
     @BeforeEach
     public void init() {
-       // System.setProperty("webdriver.chrome.driver", "C:\\Webriver\\bin\\chromedriver.exe");
+        // System.setProperty("webdriver.chrome.driver", "C:\\Webriver\\bin\\chromedriver.exe");
         browser = new ChromeDriver();
     }
 
     @AfterEach
-    public void close(){
+    public void close() {
         browser.close();
     }
 

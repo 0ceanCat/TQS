@@ -21,7 +21,7 @@ public class AutomationTest {
     private Map<String, Object> vars;
     JavascriptExecutor js;
 
-    public AutomationTest(ChromeDriver driver){
+    public AutomationTest(ChromeDriver driver) {
         this.driver = driver;
         js = driver;
         vars = new HashMap<>();

@@ -41,7 +41,7 @@ class TqsStackTest {
     @DisplayName("For bounded stacks only," +
             " pushing onto a full stack does throw an IllegalStateException")
     @Test
-    void pushWhenFull(){
+    void pushWhenFull() {
         assertThrows(IllegalStateException.class, () -> boundedStack.push("new"));
     }
 

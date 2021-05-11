@@ -12,7 +12,7 @@ public class Address {
     private String houseNumber;
 
     public Address(String road, String city, String state,
-                   String zip, String houseNumber){
+                   String zip, String houseNumber) {
 
         this.road = road;
         this.city = city;

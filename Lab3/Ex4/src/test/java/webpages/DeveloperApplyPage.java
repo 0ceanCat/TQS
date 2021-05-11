@@ -15,7 +15,7 @@ public class DeveloperApplyPage {
     @FindBy(tagName = "h1")
     WebElement heading;
 
-    @FindBy(id="talent_create_applicant_email")
+    @FindBy(id = "talent_create_applicant_email")
     WebElement developer_email;
 
     @FindBy(id = "talent_create_applicant_password")
@@ -27,41 +27,43 @@ public class DeveloperApplyPage {
     @FindBy(id = "talent_create_applicant_full_name")
     WebElement developer_full_name;
 
-    @FindBy(id ="save_new_talent_create_applicant")
+    @FindBy(id = "save_new_talent_create_applicant")
     WebElement join_toptal_button;
 
 
     //Constructor
-    public DeveloperApplyPage(WebDriver driver){
-        this.driver=driver;
+    public DeveloperApplyPage(WebDriver driver) {
+        this.driver = driver;
 
         //Initialise Elements
         PageFactory.initElements(driver, this);
     }
 
-    public void setDeveloper_email(String email){
+    public void setDeveloper_email(String email) {
         developer_email.clear();
         developer_email.sendKeys(email);
     }
 
-    public void setDeveloper_password(String password){
+    public void setDeveloper_password(String password) {
         developer_password.clear();
         developer_password.sendKeys(password);
     }
 
-    public void  setDeveloper_password_confirmation(String password_confirmation){
+    public void setDeveloper_password_confirmation(String password_confirmation) {
         developer_password_confirmation.clear();
         developer_password_confirmation.sendKeys(password_confirmation);
     }
 
-    public void setDeveloper_full_name (String fullname){
+    public void setDeveloper_full_name(String fullname) {
         developer_full_name.clear();
         developer_full_name.sendKeys(fullname);
     }
-    public void clickOnJoin(){
+
+    public void clickOnJoin() {
         join_toptal_button.click();
     }
-    public boolean isPageOpened(){
+
+    public boolean isPageOpened() {
         //Assertion
         return heading.getText().contains("Apply to Join\n" +
                 "the World's Top Talent Network");

@@ -10,11 +10,11 @@ public class StocksPortfolio {
     private IStockMarket market;
     private List<Stock> stocks;
 
-    public StocksPortfolio(){
+    public StocksPortfolio() {
         this.stocks = new ArrayList<>();
     }
 
-    public StocksPortfolio(IStockMarket market){
+    public StocksPortfolio(IStockMarket market) {
         this();
         this.market = market;
     }
@@ -35,11 +35,11 @@ public class StocksPortfolio {
         this.market = market;
     }
 
-    public void addStock(Stock stock){
+    public void addStock(Stock stock) {
         stocks.add(stock);
     }
 
-    public double getTotalValue(){
+    public double getTotalValue() {
         double value = 0.0;
 
         for (Stock stock : stocks) {

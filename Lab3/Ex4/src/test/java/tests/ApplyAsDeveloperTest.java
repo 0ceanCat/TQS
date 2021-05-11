@@ -5,13 +5,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import webpages.DeveloperApplyPage;
 import webpages.HomePage;
-
 import java.time.Duration;
-import java.time.temporal.TemporalUnit;
-import java.util.concurrent.TimeUnit;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -23,7 +19,7 @@ public class ApplyAsDeveloperTest {
     WebDriver driver;
 
     @BeforeEach
-    public void setup(){
+    public void setup() {
         //use FF Driver
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -36,7 +32,7 @@ public class ApplyAsDeveloperTest {
         home.clickOnDeveloperApplyButton();
 
         //Create object of DeveloperApplyPage
-        DeveloperApplyPage applyPage =new DeveloperApplyPage(driver);
+        DeveloperApplyPage applyPage = new DeveloperApplyPage(driver);
 
         //Check if page is opened
         assertTrue(applyPage.isPageOpened());
@@ -52,7 +48,7 @@ public class ApplyAsDeveloperTest {
     }
 
     @AfterEach
-    public void close(){
+    public void close() {
         driver.close();
     }
 }

@@ -14,7 +14,7 @@ public class HomePage {
     private WebDriver driver;
 
     //Page URL
-    private static String PAGE_URL="https://www.toptal.com";
+    private static String PAGE_URL = "https://www.toptal.com";
 
     //Locators
 
@@ -23,14 +23,14 @@ public class HomePage {
     private WebElement developerApplyButton;
 
     //Constructor
-    public HomePage(WebDriver driver){
-        this.driver=driver;
+    public HomePage(WebDriver driver) {
+        this.driver = driver;
         driver.get(PAGE_URL);
         //Initialise Elements
         PageFactory.initElements(driver, this);
     }
 
-    public void clickOnDeveloperApplyButton(){
+    public void clickOnDeveloperApplyButton() {
 
         developerApplyButton.click();
 

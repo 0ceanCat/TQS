@@ -25,7 +25,7 @@ public class AddressResolverTest {
     private AddressResolver resolver;
 
     @BeforeEach
-    void init(){
+    void init() {
         resolver = new AddressResolver();
         resolver.setHttpClient(httpClient);
     }
@@ -42,14 +42,14 @@ public class AddressResolverTest {
         Address result = resolver.findAddressForLocation(40.640661, -8.656688);
 
         //return
-        assertEquals( result, new Address( "Cais do Alboi", "Glória e Vera Cruz", "Centro", "3800-246", null) );
+        assertEquals(result, new Address("Cais do Alboi", "Glória e Vera Cruz", "Centro", "3800-246", null));
 
     }
 
     @Test
-    public void whenBadCoordinates_throwBadArrayIndex() throws IOException{
-       // bad coordinates
+    public void whenBadCoordinates_throwBadArrayIndex() throws IOException {
+        // bad coordinates
         assertThrows(BadArrayIndex.class,
-                () ->resolver.findAddressForLocation(180, 190));
+                () -> resolver.findAddressForLocation(180, 190));
     }
 }

@@ -33,11 +33,11 @@ public class DipTest {
     @Test
     public void testConstructorFromBadArrays() {
         assertThrows(IllegalArgumentException.class,
-                () -> new Dip(new int[]{10, 20, 30, 40}, new int[]{1, 2}) );
+                () -> new Dip(new int[]{10, 20, 30, 40}, new int[]{1, 2}));
 
 
         assertThrows(IllegalArgumentException.class,
-                () -> new Dip(new int[]{10, 20, 30, 40, 50}, new int[]{1}) );
+                () -> new Dip(new int[]{10, 20, 30, 40, 50}, new int[]{1}));
     }
 
     @Test

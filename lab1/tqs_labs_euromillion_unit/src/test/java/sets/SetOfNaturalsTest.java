@@ -49,12 +49,12 @@ public class SetOfNaturalsTest {
     }
 
     @Test
-    public void testAddBadNumber(){
+    public void testAddBadNumber() {
         assertThrows(IllegalArgumentException.class, () -> setA.add(-1));
     }
 
     @Test
-    public void testAddDuplicatedNumber(){
+    public void testAddDuplicatedNumber() {
         setA.add(10);
         assertThrows(IllegalArgumentException.class, () -> setA.add(10));
     }
@@ -80,22 +80,22 @@ public class SetOfNaturalsTest {
     }
 
     @Test
-    public void testIteratorAllAddedNumbers(){
+    public void testIteratorAllAddedNumbers() {
         Iterator<Integer> iterator = setB.iterator();
 
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             int n = iterator.next();
             assertTrue(setB.contains(n));
         }
     }
 
     @Test
-    public void testIteratorSize(){
+    public void testIteratorSize() {
         Iterator<Integer> iterator = setB.iterator();
         int size = setB.size();
         int counter = 0;
 
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             iterator.next();
             counter++;
         }
